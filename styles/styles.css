@@ -13,4 +13,9 @@
 }
 
 .grid-cell {
+    border: 0.5px solid black;
+}
+
+.hoverBlack {
+    background-color: black;
 }

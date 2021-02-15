@@ -10,4 +10,17 @@ function createGrid(rows, cols) {
     }
 }
 
-createGrid(16, 16);
+function hoverEffect() {
+    cell = document.getElementsByClassName("grid-cell");
+    numCells = cell.length;
+    for (let i = 0; i < numCells; i++) {
+        cell[i].addEventListener("mouseover", (e) => {
+            cell[i].style.backgroundColor = "black";
+        })
+    }
+    }
+
+
+createGrid(100, 100);
+
+hoverEffect();
