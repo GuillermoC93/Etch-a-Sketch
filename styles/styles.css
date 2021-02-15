@@ -1,4 +1,16 @@
 
-#container {
+:root {
+    --grid-rows: 1;
+    --grid-cols: 1;
+}
+
+.container {
+    width: 500px;
+    height: 500px;
     display: grid;
+    grid-template-rows: repeat(var(--grid-rows), 1fr);
+    grid-template-columns: repeat(var(--grid-cols), 1fr);
+}
+
+.grid-cell {
 }
