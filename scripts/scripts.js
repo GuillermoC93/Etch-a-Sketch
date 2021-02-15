@@ -1,4 +1,18 @@
 const container = document.querySelector(".container");
+const btn = document.querySelector('button');
+
+createGrid(16, 16);
+
+btn.addEventListener('click', () => {
+    dimensions = prompt("Enter a size: ");
+    clearGrid(container);
+    if (dimensions > 100) {
+        return alert("ERROR")
+    } else {
+        createGrid(dimensions, dimensions);
+    }
+    
+});
 
 function createGrid(rows, cols) {
     container.style.setProperty("--grid-rows", rows);
@@ -7,8 +21,9 @@ function createGrid(rows, cols) {
         let cell = document.createElement("div");
         cell.classList.add("grid-cell");
         container.appendChild(cell);
-    }
-}
+    };
+    hoverEffect();
+};
 
 function hoverEffect() {
     cell = document.getElementsByClassName("grid-cell");
@@ -16,11 +31,12 @@ function hoverEffect() {
     for (let i = 0; i < numCells; i++) {
         cell[i].addEventListener("mouseover", (e) => {
             cell[i].style.backgroundColor = "black";
-        })
-    }
-    }
+        });
+    };
+};
 
-
-createGrid(100, 100);
-
-hoverEffect();
+function clearGrid(parent) {
+    while (parent.firstChild) {
+        parent.removeChild(parent.firstChild);
+    };
+};

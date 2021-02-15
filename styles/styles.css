@@ -4,7 +4,28 @@
     --grid-cols: 1;
 }
 
+header {
+    display: flex;
+}
+
+h1 {
+    margin: auto;
+    font-size: 100px;
+    font-style: bold;
+    padding-bottom: 25px;
+}
+
+.buttonDiv {
+    display: flex;
+    padding-bottom: 35px;
+}
+
+button {
+    margin: auto;
+}
+
 .container {
+    margin: auto;
     width: 500px;
     height: 500px;
     display: grid;
