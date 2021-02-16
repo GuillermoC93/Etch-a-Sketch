@@ -4,7 +4,7 @@ const btn = document.querySelector('button');
 createGrid(16, 16);
 
 btn.addEventListener('click', () => {
-    dimensions = prompt("Enter a size: ");
+    dimensions = prompt("Enter a size: ", 16);
     clearGrid(container);
     if (dimensions > 100) {
         return alert("ERROR")
